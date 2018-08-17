@@ -1,1 +1,9 @@
 samples/*
+*.aux
+*.lof
+*.log
+*.lot
+*.out
+An_thesis.pdf
+*.toc
+
