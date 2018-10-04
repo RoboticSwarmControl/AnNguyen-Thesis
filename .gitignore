@@ -6,4 +6,5 @@ samples/*
 *.out
 An_thesis.pdf
 *.toc
-
+*.bbl
+*.blg
