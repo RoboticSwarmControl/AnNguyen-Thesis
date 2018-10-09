@@ -1,4 +1,6 @@
 samples/*
+2016RALHeteroSensor/*
+2018ICRA/*
 *.aux
 *.lof
 *.log
