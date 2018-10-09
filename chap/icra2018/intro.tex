@@ -1,0 +1,44 @@
+\section{Introduction}
+
+Mosquito-borne diseases kill millions of humans each year~\cite{murray2012global}. 
+ Because of this threat, governments worldwide track mosquito populations.
+ Tracking individual mosquitoes is difficult because of their small size, wide-ranging flight, and preference for low-light.
+ Tracking studies of individual mosquitos have chosen to use small ($\SI{1.2}{\metre} \times \SI{2.4}{\metre}$) indoor regions~\cite{parker2015infrared}, or mating swarms backlit against a solid background~\cite{butail20113d}.
+
+The dominant tools for tracking mosquito populations are stationary traps that are checked at weekly intervals (\textit{e.g.} Encephalitis Vector Surveillance traps and/or gravid traps~\cite{williams2007comparison}). 
+Recent research has focused on making these traps smaller, cheaper, and capable of providing real-time data~\cite{chen2014flying,linn2016building}; however, they still rely on attracting mosquitoes to the trap. 
+ This paper presents an alternate solution using an electrified bug-zapping screen mounted on an unmanned aerial vehicle (UAV) as shown in Fig.~\ref{fig:DroneAndNet} to seek out the mosquitoes in their habitat.  As the UAV follows a path, it sweeps out a volume of air, temporarily removing all the mosquitoes in this volume.  By monitoring the voltage across this screen, we can track individual mosquito contacts.
+     UAVs have strict energy budgets, so optimized flight patterns are of crucial importance. As a consequence, putting
+the UAV to good use requires
+methods for computing trajectories that minimize energy consumption along the way, but maximize the total volume of mosquitoes 
+at visited locations.
+
+%the available flight time depends on the flight pattern, as making it crucial to optimize the used trajectories. As it turns out, threquires the utility of a which makes it necessary to  which limit the flight time to a maximum denoted by $T$.
+    %The goal is to design a trajectory for the mosquito screen with duration less than $T$ that maximizes the number of mosquito eliminations.
+
+  \begin{figure}
+\centering
+\begin{overpic}[width=1\columnwidth]{DroneAndNet_v2.pdf}\end{overpic}
+\caption{\label{fig:DroneAndNet}
+	  A hexacopter UAV carrying a $\SI{48}{\centi\metre} \times \SI{61}{\centi\metre}$ rectangular bug-zapping screen. An onboard micro controller monitors the voltage across the screen and records the time, GPS location, humidity, and altitude for each mosquito strike.  At right are three frames recorded by the onboard camera showing mosquito hits, during the day (top) and at twilight.
+See attachment for videos of flight experiments~\cite{Bhatnagar2018}.
+%Video is available at \href{https://youtu.be/1gvJ-yTf-E8}{https://youtu.be/1gvJ-yTf-E8}~\cite{DroneVideo}. 
+\vspace{-2em}
+}
+\end{figure}
+
+
+   % This process can be modeled as sampling without replacement from a point cloud of mobile particles using a mobile agent.  The point cloud particles are generated from a known or unknown distribution, and the mobile agent clears all particles in a swept-out region each time step. 
+%    UAVs have strict energy budgets, which limit the flight time to a maximum denoted by $T$.
+%    The goal is to design a trajectory for the mosquito screen with duration less than $T$ that maximizes the number of mosquito eliminations.%, in probability, samples the most particles.  
+%   We assume the agent can detect each particle collision and can use these detections to modify a planned trajectory.
+%    This paper presents both open-loop trajectories and policies with feedback. 
+%  
+%      \subsection{Overview}
+%A multimedia introduction to the techniques used in this paper is available at~\cite{becker2017zapping}.
+  This paper is arranged as follows.  
+  After a review of related work in \S \ref{sec:relatedWork}, 
+  we describe a design and rationale for a UAV with bug zapper in \S  \ref{Sec:HardwareDesign}.
+    We next present a path planning optimization strategy in   \S \ref{sec:Simulation}.
+  We then describe hardware experiments with the UAV  in \S  \ref{sec:Experiments} and conclude with directions for future research  in \S  \ref{sec:conclusion}.
+  
