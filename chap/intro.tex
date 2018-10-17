@@ -78,6 +78,18 @@ As a consequence, putting the UAV to good use requires methods for computing tra
 
 \section[Drifting sensors]{Surveying underwater with drifting sensors}
 
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=.3\columnwidth]{driftnode/driftnode.jpg}
+	\includegraphics[width=.3\columnwidth]{driftnode/driftnodeassembled.jpg}
+	\caption[Driftnode]{
+		(Left) driftnode before assembly, the electronics are attached to a center acrylic plate.
+		(Right) an assembled driftnode.
+	} \label{fig:driftnodeoverview}
+	\end{center}
+	\vspace{-1em}
+\end{figure}
+
 Human know less about the ocean than they do about space.
 Because EM waves attenuates quickly in water, it is difficult to deploy wireless sensor network in water for permanent surveying post.
 To survey a water surface, a boat with crew needs to be dispatched.
@@ -88,6 +100,6 @@ This require the need for several crews, or risk security incidence when an area
 
 A wireless sensor network, composed of drifting sensors, deployed temporarily or permanently, can monitor an area for much longer with less labor needed.
 A UAV can be used to periodically visit these sensors, collecting their sensor logs and charging them.
-We present a basic drifting sensor, originally created by the University of South Carolina \cite{drifterUSC}.
+We present a basic drifting sensor, originally created by the University of South Carolina \cite{drifterUSC}, as seen in Fig.~\ref{fig:driftnodeoverview}.
 The drifting sensor is composed of a suite of basic underwater sensor: an underwater depth sensor, a pressure sensor, a turbidity sensor, 9-axis IMU and GPS location sensor.
 Our drifting sensor can broadcast its own wireless access point, which enable an AUV to collect data from the sensor at close range.
