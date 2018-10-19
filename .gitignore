@@ -10,6 +10,7 @@ An_thesis.pdf
 *.toc
 *.bbl
 *.blg
+*.synctex.gz
 
 # Apple/Mac ignore
 # General
