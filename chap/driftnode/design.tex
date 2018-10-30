@@ -59,6 +59,22 @@ Raspbian is based on Debian, which can run a simple version of the Robotics Oper
 ROS allow us to connect multiple software nodes hosted on multiple computers.
 This means we can easily connect one drift node to another, or a driftnode to a data collecting embedded computer carried on an AUV.
 
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=0.48\columnwidth]{driftnode/dn2_gps_demo.jpg}
+	\includegraphics[width=0.48\columnwidth]{driftnode/dn2_imu_demo.jpg}
+	\includegraphics[width=0.48\columnwidth]{driftnode/dn2_turb.pdf}
+	\includegraphics[width=0.48\columnwidth]{driftnode/dn2_press.pdf}
+	\caption[Driftnode]{
+		(Upper Left) GPS trace of a drift node mission.
+		(Upper Right) IMU data visualized using Rviz, showing the orientation of the drift node.
+		(Lower Left) Turbidity sensor data overlayed on top of the GPS trace.
+		(Lower Right) Pressure sensor data overlayed on top of the GPS trace.
+	} \label{fig:driftvis}
+	\end{center}
+	\vspace{-1em}
+\end{figure}
+
 All sensors are logged using ROS bag files.
 Each sensor have its own Python script file that publishes on a topic for that sensor.
 The GPS data is published with \textit{sensor\_msgs/NavSatFix} messages.
@@ -68,7 +84,8 @@ The range data is published with \textit{sensor\_msgs/Range} messages.
 The pressure data is published with \textit{sensor\_msgs/FluidPressure} messages.
 ROS messages are recorded with publishing time and host name, so these messages can be played back synchronously.
 
-Missing figure show the various way of visualizing the data.
-The GPS trace can be visualized with an online GPS visualizer, or a gpsd\_viewer which work with ROS \textit{sensor\_msgs/NavSatFix} messages.
-The IMU data can be visualized in Rviz, a ROS topic visualizer.
-The other data can be overlayed on to the GPS trace.
+
+Fig~\ref{fig:driftvis} shows visualizations for the GPS trace and the IMU data.
+The GPS trace can be graphed by an online GPS visualizer, such as \emph{http://www.gpsvisualizer.com/}.
+The IMU data is visualized to show the orientation of the drift node, using Rviz, a ROS tool.
+The other data streams can be overlayed on to the GPS trace.
