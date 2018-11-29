@@ -12,7 +12,7 @@
 		(Top Left) Garmin GDT 43 uses NMEA 2000 
 		(Top Right) MaxBotix MB7380 use analog voltage output 
 		(Bottom Left) JSN-SR04T use trigger and echo timing
-		(Bottom Right) Deeper Smart Sonar PRO propietary fish finder 
+		(Bottom Right) Deeper Smart Sonar PRO proprietary fish finder 
 	} \label{fig:sonarsensors}
 	\end{center}
 	\vspace{-1em}
@@ -21,7 +21,7 @@
 Extensive testing were done to find a suitable depth sensor for a small, lightweight sensor node with data logging and transmitting.
 The first sensors considered were commercially available sonar depth sensor designed for large and small fishing boats, such as the Garmin GDT 43 depth and temperature transducer.
 However, most of these transducer are too large for our applications.
-The largest obstacle is their communication protocol, most new, "small and light weight" transducer use the NMEA 2000 communication protocol.
+The largest obstacle is their communication protocol, most new, "small and light weight" transducers use the NMEA 2000 communication protocol.
 This is a CAN Bus based protocol that is largely closed source and require extensive reverse engineering to use.
 There are some open sourced projects who are can inteprete these protocols, through exhaustive reverse engineering and public information.
 To name a few: \emph{openskipper.org}, \emph{KBox}, \emph{signalk.org} and \emph{CAN Boat} on \emph{github.com}.
@@ -105,7 +105,7 @@ The fish finder data was used to compare against the MaxBotix sensor.
 	\vspace{-1em}
 \end{figure}
 
-Fig.~\ref{fig:pulleytestsetup} show the set up and a picture of the bottom of the bayou obtained with the fishfinder sensor.
+Fig.~\ref{fig:pulleytestsetup} show the second test's setup and a picture of the bottom of the bayou obtained with the fishfinder sensor.
 Fig.~\ref{fig:pulleylog} show that the MaxBotix sensor returned data that was purely noise.
 The second test showed that the MaxBotix is not usable as an underwater depth sensor.
 
