@@ -45,16 +45,15 @@ The UAV suspends a rectangular bug-zapping screen beneath it.  Propwash pushes i
 \end{figure}
 
 
-We assume that air above the UAV is quiescent, so the change in velocity of the air is $v_d~ \si{\metre\per\second}$.
+We assume that air above the UAV is quiescent, so the change in velocity of the air is $v_d~ \si{\metre\per\second}$. So that 
 \begin{align} \label{eq:forceBalanceForDrone}
-\text{Force gravity} & = \left(\text{mass flow}\right) \cdot \text{air velocity} \nonumber \\
-m_{d} \cdot  g &= (v_d \cdot  \rho_a \cdot  d_d^2 ) \cdot  v_d 
-% \text{kg} \cdot \frac{ \text{m}}{ \text{s}^2}&= \left( \frac{ \text{m}}{\text{s}} \cdot  \frac{ \text{kg}}{\text{m}^3}  \cdot \text{m}^2 \right) \cdot  \frac{ \text{m}}{\text{s}}\nonumber
+\text{Force gravity} & = \left(\text{mass flow}\right) \cdot \text{air velocity and } \nonumber \\
+m_{d} \cdot  g &= (v_d \cdot  \rho_a \cdot  d_d^2 ) \cdot  v_d. 
 \end{align}
 
 Then the required \emph{propwash}, the velocity of air beneath the UAV, for hovering is
 \begin{align} \label{eq:dronePropwash}
-v_d = \sqrt{ \frac{ m_d g}{\rho_a d_d^2} }
+v_d = \sqrt{ \frac{ m_d g}{\rho_a d_d^2} }.
 \end{align}
 The flight testing site in Houston, Texas is \SI{15}{\metre} above sea level. At sea level the density of air $\rho_a$ is \SI{1.225}{\kilogram\per\cubic\metre}.
 The UAV and instrumentation combined weigh \SI{5.1}{\kilogram} with a width of \SI{0.75}{\metre}. The acceleration due to gravity is \SI{9.871}{\metre\per\square\second}.  Substituting these values gives $v_d = \SI{8.5}{\metre\per\second}$.
@@ -67,7 +66,7 @@ h_m &= h_{\textrm{top}} - h_{\textrm{bottom}} =  d_s\left(\frac{v_d}{v_f}\cos(\t
 \end{align}
 The optimal angle is therefore a function of forward and propwash velocity:
 \begin{align} \label{eq:OptimalScreenAngle}
-\ \theta = \mathrm{ArcTan}\left(\frac{v_f}{v_d}\right)
+\ \theta = \mathrm{ArcTan}\left(\frac{v_f}{v_d}\right).
 \end{align}
 
 To ensure the maximum number of mosquitoes are collected, the screen must be sufficiently far below the UAV $ h_s > \frac{d_s}{2} \sin(\theta) +  \frac{d_d + d_s\cos(\theta)}{2}  \frac{v_d}{v_f}$  and the bottom of the screen must not touch the ground, $ h_d > h_s + \frac{d_s}{2} \sin(\theta) $.
